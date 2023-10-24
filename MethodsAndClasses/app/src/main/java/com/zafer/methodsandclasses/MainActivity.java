@@ -8,6 +8,8 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     Musician musician = new Musician("" , "" , 0);
     Simsons makesimsons = new Simsons("" , "" , 0);
+
+
     int s1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("OnCreate Çayrıldı");
 
     }
+    public void elementClass(){
+        SetterAndGetter setterAndGetter = new SetterAndGetter("" , "" , "");
+        setterAndGetter.setElementOne("elementOne");
+        setterAndGetter.setElementTwo("elementTwo");
+        setterAndGetter.setElementThree("elementThree");
+        System.out.println(setterAndGetter.getElementOne());
+        System.out.println(setterAndGetter.getElementTwo());
+        System.out.println(setterAndGetter.getElementThree());
+    }
+
     public void makeMusician(){
         musician.Name = "Zafer";
         musician.Insturment = "Guitar";
@@ -26,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         testMethod();
         makeMusician();
         makeSimsons();
+        elementClass();
     }
     public void testMethod(){
         int x = 4 + 4;
